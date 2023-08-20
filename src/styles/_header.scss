@@ -1,14 +1,39 @@
+@use 'variaveis';
+
 .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$cor-de-fundo;
+    transition: background-color .7s ease-out;
+    z-index: 1;
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: background-color .7s ease-out;
+
+        .header {
+            &__logo,
+            &__links__item:first-child {
+                opacity: 0;
+                visibility: hidden;
+                transition: .7s ease-out;
+            }
+        }
+    }
+
     &__container {
         padding: 8px 36px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__logo {
         max-width: 80px;
         width: 100%;
-        margin: 5px;
+        margin: 10px 5px 0px;
+        transition: opacity .7s ease-out;
     }
 
     &__links {
@@ -16,6 +41,8 @@
 
         &__item {
             margin: 5px;
+            transition: opacity .7s ease-out;
+            list-style: none;
         }
     }
 
