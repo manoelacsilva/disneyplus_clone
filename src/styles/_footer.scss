@@ -3,12 +3,20 @@
 .footer {
     padding: 26px 8px;
 
+    @media (max-width: 768px) {
+        padding: 5.6vw;
+    }
+
     &__container {
         max-width: 1024px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
         padding-bottom: 20px;
+
+        @media (max-width: 768px) {
+            padding-bottom: 0px;
+        }
     }
 
     &__logo {
@@ -46,6 +54,7 @@
 .language-selector {
     display: flex;
     align-items: center;
+    padding: 0 16px;
 
     img {
         height: 18px;

@@ -1,6 +1,10 @@
 .plans {
     padding: 5.6vw;
 
+    @media (max-width: 768px) {
+        padding: 80px 5.6vw 80px;
+    }
+
     h2 {
         text-align: center;
     }
@@ -10,7 +14,15 @@
         justify-content: space-around;
         margin-top: 50px;
         list-style: none;
-        
+
+        @media (max-width: 768px) {
+            display: grid;
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
@@ -30,6 +42,14 @@
             strong {
                 display: block;
                 margin-top: 24px;
+            }
+
+            @media (max-width: 768px) {
+                padding: 5.6vw;
+
+                &:first-child {
+                    padding: 0px 5.6vw 90px;
+                }
             }
         }
     }
